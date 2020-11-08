@@ -7,6 +7,8 @@ class Prototype < ApplicationRecord
   validates  :concept, presence: true
   # プロトタイプの画像1枚
   has_one_attached :image
+  # 必須の設定
+  validates :image, presence: true
   # user テーブル
   belongs_to :user
   # comments テーブル
